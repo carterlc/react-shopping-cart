@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import Header from './Header';
+import Hero from './Hero';
 // let shoppingBag = document.getElementById('cart-icon');
 // let cart = document.querySelector('.cart');
 // let closeCart = document.getElementById('close-cart');
@@ -24,14 +25,7 @@ function App() {
         {/* Header */}
         <Header />
         {/* Cover Page */}
-        <div className='hero'>
-          <div className='cta'>
-            <h2>SnowBound</h2>
-            <p>Bound to the snow, free to explore</p>
-            <button>Shop Now</button>
-          </div>
-        </div>
-
+        <Hero />
         {/* Cart */}
         <div className={`cart ${showCart ? 'active' : ''}`}>
           <h2 className='cart-title'>Your Cart</h2>
@@ -51,7 +45,7 @@ function App() {
                 </div>
 
                 {/* Purchase */}
-                <i  onClick={ () => setShowCart(false)} className='bx bx-x' id="close-cart"></i>
+                <i onClick={() => setShowCart(false)} className='bx bx-x' id="close-cart"></i>
               </div>
             </div>
             <button type="button" className="btn-buy">Buy Now</button>

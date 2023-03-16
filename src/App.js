@@ -1,6 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 
+let shoppingBag = document.getElementById('cart-icon');
+let cart = document.querySelector('.cart');
+let closeCart = document.getElementById('close-cart');
+// Open the cart
+shoppingBag.onclick = () => {
+  cart.classList.add("active");
+};
+// Close the cart
+closeCart.onclick = () => {
+  cart.classList.remove("active");
+};
+
 function App() {
   return (
     <>
@@ -30,6 +42,7 @@ function App() {
             <button>Shop Now</button>
           </div>
         </div>
+
         {/* Cart */}
         <div className="cart">
           <h2 className='cart-title'>Your Cart</h2>
@@ -47,12 +60,13 @@ function App() {
                   <div className='total-title'>Total</div>
                   <div className='total-price'>$0</div>
                 </div>
+
                 {/* Purchase */}
                 <i class='bx bx-x' id="close-cart"></i>
               </div>
             </div>
             <button type="button" class="btn-buy">Buy Now</button>
-            <button type="button" class="btn-close">Keep Shopping</button>
+            <button type="button" class="btn-apple">Purchase with Apple Pay</button>
           </div>
         </div>
 

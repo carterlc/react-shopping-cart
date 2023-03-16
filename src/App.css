@@ -66,6 +66,10 @@ nav a {
   background-color: yellow;
   justify-content: space-between;
   position: relative;
+  background-image: url(assets/hero-image.jpg);
+  background-size: cover;
+  background-position: center;
+  /* filter: grayscale(1); */
 }
 
 div.hero div.cta {

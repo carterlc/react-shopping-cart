@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import Header from './Header';
 // let shoppingBag = document.getElementById('cart-icon');
 // let cart = document.querySelector('.cart');
 // let closeCart = document.getElementById('close-cart');
@@ -21,22 +22,7 @@ function App() {
     <>
       <body>
         {/* Header */}
-        <header>
-          <nav>
-            <div>
-              <h1>SnowBound</h1>
-            </div>
-            <div className='topnav-links'>
-              <ul>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Location</a></li>
-                <li><a href="#">Search</a></li>
-                <i onClick={ () => setShowCart(true)} className='bx bx-shopping-bag' id='cart-icon'></i>
-              </ul>
-            </div>
-          </nav>
-        </header>
+        <Header />
         {/* Cover Page */}
         <div className='hero'>
           <div className='cta'>

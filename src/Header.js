@@ -1,9 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 
-export default function Header() {
-
-    const [showCart, setShowCart] = useState(false);
+export default function Header({cartClick}) {
 
     return (
         <header>
@@ -17,7 +15,7 @@ export default function Header() {
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Location</a></li>
                         <li><a href="#">Search</a></li>
-                        <i onClick={() => setShowCart(true)} className='bx bx-shopping-bag' id='cart-icon'></i>
+                        <i onClick={cartClick} className='bx bx-shopping-bag' id='cart-icon'></i>
                     </ul>
                 </div>
             </nav>

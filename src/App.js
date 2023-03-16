@@ -1,19 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+// let shoppingBag = document.getElementById('cart-icon');
+// let cart = document.querySelector('.cart');
+// let closeCart = document.getElementById('close-cart');
+// // Open the cart
+// shoppingBag.onclick = () => {
+//   cart.classList.add("active");
+// };
+// // Close the cart
+// closeCart.onclick = () => {
+//   cart.classList.remove("active");
+// };
 
-let shoppingBag = document.getElementById('cart-icon');
-let cart = document.querySelector('.cart');
-let closeCart = document.getElementById('close-cart');
-// Open the cart
-shoppingBag.onclick = () => {
-  cart.classList.add("active");
-};
-// Close the cart
-closeCart.onclick = () => {
-  cart.classList.remove("active");
-};
 
 function App() {
+
+  const [showCart, setShowCart] = useState(false);
+
   return (
     <>
       <body>
@@ -29,7 +32,7 @@ function App() {
                 <li><a href="#">Support</a></li>
                 <li><a href="#">Location</a></li>
                 <li><a href="#">Search</a></li>
-                <i class='bx bx-shopping-bag' id='cart-icon'></i>
+                <i onClick={ () => setShowCart(true)} className='bx bx-shopping-bag' id='cart-icon'></i>
               </ul>
             </div>
           </nav>
@@ -44,7 +47,7 @@ function App() {
         </div>
 
         {/* Cart */}
-        <div className="cart">
+        <div className={`cart ${showCart ? 'active' : ''}`}>
           <h2 className='cart-title'>Your Cart</h2>
           <div className='cart-content'>
             <div className='cart-box'>
@@ -53,8 +56,8 @@ function App() {
                 <div className='cart-product-title'>Snowboard Jacket</div>
                 <div className='cart-product-price'>$329 CAD</div>
                 <div className='input-and-icon'>
-                  <input type="number" value="1" class="cart-quantity"></input>
-                  <i class='bx bx-trash cart-remove'></i>
+                  <input type="number" value="1" className="cart-quantity"></input>
+                  <i className='bx bx-trash cart-remove'></i>
                 </div>
                 <div className='total'>
                   <div className='total-title'>Total</div>
@@ -62,11 +65,11 @@ function App() {
                 </div>
 
                 {/* Purchase */}
-                <i class='bx bx-x' id="close-cart"></i>
+                <i  onClick={ () => setShowCart(false)} className='bx bx-x' id="close-cart"></i>
               </div>
             </div>
-            <button type="button" class="btn-buy">Buy Now</button>
-            <button type="button" class="btn-apple">Purchase with Apple Pay</button>
+            <button type="button" className="btn-buy">Buy Now</button>
+            <button type="button" className="btn-apple">Purchase with Apple Pay</button>
           </div>
         </div>
 

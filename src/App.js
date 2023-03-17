@@ -6,6 +6,7 @@ import Cart from './Cart';
 import Product from './Product';
 import Footer from './Footer';
 import Shop from './Shop';
+import products from './Products.json';
 
 function App() {
 
@@ -13,68 +14,25 @@ function App() {
 
   const openCart = () => {
     setShowCart(true);
-    console.log('herehere');
   }
   const closeCart = () => {
     setShowCart(false);
-    console.log('herehere');
   }
   return (
     <>
-        {/* Header */}
-        <Header cartClick={openCart}/>
-        {/* Cover Page */}
-        <Hero />
-        {/* Cart */}
-        <Cart closeCart={closeCart} showCart={showCart}/>
-        {/* Product Grid */}
-        <section className='products'>
-          <h2>Products</h2>
-          <div className='product-grid'>
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <div className='product'>
-              <img></img>
-              <h3>Snowboard Jacket</h3>
-              <p>Men White Dotted</p>
-              <span className='price'>$329 CAD</span>
-              <button>Add to Cart</button>
-            </div>
-            <div className='product'>
-              <img></img>
-              <h3>Snowboard Jacket</h3>
-              <p>Men White Dotted</p>
-              <span className='price'>$329 CAD</span>
-              <button>Add to Cart</button>
-            </div>
-            <div className='product'>
-              <img></img>
-              <h3>Snowboard Jacket</h3>
-              <p>Men White Dotted</p>
-              <span className='price'>$329 CAD</span>
-              <button>Add to Cart</button>
-            </div>
-            <div className='product'>
-              <img></img>
-              <h3>Snowboard Jacket</h3>
-              <p>Men White Dotted</p>
-              <span className='price'>$329 CAD</span>
-              <button>Add to Cart</button>
-            </div>
-            <div className='product'>
-              <img></img>
-              <h3>Snowboard Jacket</h3>
-              <p>Men White Dotted</p>
-              <span className='price'>$329 CAD</span>
-              <button>Add to Cart</button>
-            </div>
-          </div>
-        </section>
-        {/* Footer */}
-       <Footer />
+      {/* Header */}
+      <Header cartClick={openCart} />
+      {/* Cover Page */}
+      <Hero />
+      {/* Cart */}
+      <Cart closeCart={closeCart} showCart={showCart} />
+      {/* Product Grid */}
+      <section className='products'>
+        <h2>Products</h2>
+        <Shop data={products} />
+      </section>
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

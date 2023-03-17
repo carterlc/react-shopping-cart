@@ -2,54 +2,63 @@
     "jackets": [
         {
             "id": 1,
+            "name": " Mens Frosty Flair",
             "description": "Red Puffer Jacket",
             "price": 350,
             "image": "./assets/red-jacket-boy.jpg"
         },
         {
             "id": 2,
+            "name": "Mens Chill Master",
             "description": "Orange Puffer Jacket",
             "price": 230,
             "image": "./assets/orange-jacket-boy.jpg"
         },
         {
             "id": 3,
+            "name": "Mens Artic Attire",
             "description": "Yellow Insulated Jacket",
             "price": 230,
             "image": "./assets/yellow-jacket-boy.jpg"
         },
         {
             "id": 4,
+            "name": "Mens Chill Master",
             "description": "Black Furry Jacket",
             "price": 430,
             "image": "./assets/yellow-jacket-boy.jpg"
         },
         {
             "id": 5,
+            "name": " Mens Frosty Flair",
             "description": "Green Jacket",
             "price": 110,
             "image": "./assets/green-jacket-boy.jpg"
         },
         {
             "id": 6,
+            "name": "Mens Artic Attire",
             "description": "Grey Jacket",
             "price": 130,
             "image": "./assets/greenish-grey-jacket-boy.jpg"
         },
         {
             "id": 7,
+            "name": "Womens SnowSeeker",
             "description": "Brown Insulated Jacket",
             "price": 160,
             "image": "./assets/brown-jacket-girl.jpg"
         },
         {
             "id": 8,
+            "name": "Womens Arctic Blossum",
             "description": "Black Furry Jacket",
             "price": 280,
             "image": "./assets/black-jacket-girl.jpg"
         },
         {
             "id": 9,
+            "name": "Womens Winter Belle",
             "description": "Grey Puffer Jacket",
             "price": 410,
             "image": "./assets/grey-jacket-girl.jpg"

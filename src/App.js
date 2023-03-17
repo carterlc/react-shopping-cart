@@ -5,6 +5,7 @@ import Hero from './Hero';
 import Cart from './Cart';
 import Product from './Product';
 import Footer from './Footer';
+import Shop from './Shop';
 
 function App() {
 

@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 // import products from './Products.json';
 
 const Product = (props) => {
-    const { id, name, description, price, image } = props.data;
-    console.log(description)
+    const { name, description, price, image } = props.data;
+
     return (
         <div className='product'>
             <img src={image} />

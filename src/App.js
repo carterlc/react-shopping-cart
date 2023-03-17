@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import Cart from './Cart';
-import Product from './Product';
 import Footer from './Footer';
 import Shop from './Shop';
 import products from './Products.json';
@@ -25,7 +24,7 @@ function App() {
       {/* Cover Page */}
       <Hero />
       {/* Cart */}
-      <Cart closeCart={closeCart} showCart={showCart} />
+      <Cart closeCart={closeCart} showCart={showCart} data={products} />
       {/* Product Grid */}
       <section className='products'>
         <h2>Products</h2>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import CartProduct from './CartProduct';
 
 export default function Cart({ closeCart, showCart, data }) {
-  console.log(data)
+
   return (
     <div className={`cart ${showCart ? 'active' : ''}`}>
       <i onClick={closeCart} className='bx bx-x' id="close-cart"></i>

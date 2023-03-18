@@ -190,7 +190,7 @@ div.hero div.cta {
 
 section {
   max-width: var(--body-width);
-  margin: auto;
+  margin: 4rem auto;
 }
 
 section.products h2 {
@@ -239,14 +239,15 @@ section.products h2 {
 /* Footer Styling */
 
 footer {
-  display: flex;
+  display: grid;
   gap: 4rem;
-  flex-direction: column;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   background-color: black;
   color: white;
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 300px;
 }
 
 footer li a {

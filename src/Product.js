@@ -2,17 +2,17 @@ import './App.css';
 import React, { useState } from 'react';
 // import products from './Products.json';
 
-const Product = (props) => {
-    const { name, description, price, image } = props.data;
+const Product = ({data, addToCart}) => {
+    const { id, name, description, price, image } = data;
 
     return (
-        <div className='product'>
+        <div className='product' key={id}>
             <img src={image} />
             <h3>{name}</h3>
             <p>{description}</p>
             <div className='price-wrapper'>
                 <span>C${price}</span>
-                <button className='product-button'>Add to Cart</button>
+                <button className='product-button' onClick={() => addToCart(id)}>Add to Cart</button>
             </div>
         </div>
     )

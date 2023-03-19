@@ -31,8 +31,8 @@ function App() {
   };
 
   const deleteFromCart = (id) => {
-    // const updatedCart = cartItems.filter((product) => product.id !==id);
-    // setCartItems(updatedCart);
+    const updatedCart = cartItems.filter((product) => product.id !==id);
+    setCartItems(updatedCart);
     console.log(`Product with ID ${id} deleted from cart`);
   };
 

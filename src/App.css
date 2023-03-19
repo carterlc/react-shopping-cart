@@ -328,3 +328,10 @@ footer li a {
 footer> :first-child {
   margin-top: 2rem;
 }
+
+
+@media screen and (max-width: 880px) {
+  nav ul li {
+    display: none;
+  }
+}

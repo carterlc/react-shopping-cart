@@ -10,7 +10,7 @@ export default function Hero() {
             <div className='cta'>
                 <h2>SnowBound</h2>
                 <p>Bound to the snow, free to explore</p>
-                <button>Shop Now</button>
+                <button className='hero-btn'>Shop Now</button>
             </div>
         </div>
     )

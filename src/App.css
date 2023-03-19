@@ -3,7 +3,12 @@
   --main-color: white;
   --secondary-color: black;
   --cta-color: rgb(77, 77, 237);
+  /* --cta-color: #E2E049; */
   --text-color: black;
+
+  --lrg-heading: clamp(3.36rem, calc(2.87rem + 2.45vw), 4.77rem);
+  --med-heading: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+  --sml-heading: clamp(1.20rem, calc(1.07rem + 0.63vw), 1.56rem);
 }
 
 * {
@@ -46,12 +51,32 @@ nav ul li {
   list-style-type: none;
 }
 
+
 nav ul>* {
   padding-left: 4rem;
 }
 
 nav a {
   color: var(--main-color);
+  position: relative;
+z-index: 1;
+
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: var(--cta-color);
+  transition: 200ms;
+  left: 0;
+  bottom: -8px;
+  z-index: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 #cart-icon {
@@ -69,14 +94,46 @@ nav a {
   background-image: url(../public/assets/hero-image-blk-wyt.jpg);
   background-size: cover;
   background-position: center;
+  color: var(--main-color);
   /* filter: grayscale(1); */
+}
+
+.hero h2 {
+  font-size: var(--lrg-heading);
+}
+
+.hero p {
+  font-size: var(--sml-heading);
+}
+
+.hero-btn {
+  margin-top: 8vh;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: var(--main-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  outline: none;
+  padding: 13px 53px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.hero-btn:hover {
+  background-color: var(--cta-color);
 }
 
 div.hero div.cta {
   position: absolute;
   bottom: 0;
   margin: 0 5rem 5rem;
-  width: 100%;
 }
 
 /* Cart */
@@ -160,7 +217,7 @@ div.hero div.cta {
   touch-action: manipulation;
 }
 
-.btn-apple{
+.btn-apple {
   background-color: var(--secondary-color) !important;
 }
 
@@ -179,7 +236,7 @@ div.hero div.cta {
 }
 
 #close-cart {
-  position:absolute;
+  position: absolute;
   top: 0;
   right: 0;
   cursor: pointer;
@@ -196,6 +253,7 @@ section {
 section.products h2 {
   margin: 4rem 0;
   text-align: center;
+  font-size: var(--med-heading);
 }
 
 .product-grid {
@@ -204,9 +262,16 @@ section.products h2 {
   gap: 2rem;
 }
 
+.product {
+color:rgb(70, 70, 70);
+}
+
+.product:hover {
+  color: var(--secondary-color);
+}
+
 .product-button {
   background-color: var(--cta-color);
-  border-radius: 8px;
   border-width: 0;
   color: var(--main-color);
   cursor: pointer;
@@ -234,6 +299,11 @@ section.products h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2rem;
+}
+
+span.price {
+  font-weight: bold;
 }
 
 /* Footer Styling */

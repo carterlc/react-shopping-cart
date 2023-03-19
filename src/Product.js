@@ -11,7 +11,7 @@ const Product = ({data, addToCart}) => {
             <h3>{name}</h3>
             <p>{description}</p>
             <div className='price-wrapper'>
-                <span>C${price}</span>
+                <span className='price'>C${price}</span>
                 <button className='product-button' onClick={() => addToCart(id)} >Add to Cart</button>
             </div>
         </div>

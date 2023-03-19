@@ -33,6 +33,12 @@ function App() {
     console.log(cartItems);
   };
 
+  const deleteFromCart = (id) => {
+    const updatedCart = cartItems.filter((item) => item.id !==id);
+    setCartItems(updatedCart);
+    console.log(cartItems);
+  };
+
   return (
     <>
       {/* Header */}
@@ -40,7 +46,7 @@ function App() {
       {/* Cover Page */}
       <Hero />
       {/* Cart */}
-      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} />
+      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} delete={deleteFromCart}/>
       {/* Product Grid */}
       <section className='products'>
         <h2>Products</h2>

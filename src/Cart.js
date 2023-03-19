@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import CartProduct from './CartProduct';
 
-export default function Cart({ closeCart, showCart, data }) {
+export default function Cart({ closeCart, showCart, data, delete }) {
 
   const total = data.reduce((acc, item) => acc + item.price, 0);
 
@@ -14,7 +14,7 @@ export default function Cart({ closeCart, showCart, data }) {
         {
           data.map((product => {
             return (
-              <CartProduct data={product} />
+              <CartProduct data={product} delete={deleteFromCart}/>
             )
           }))
         }

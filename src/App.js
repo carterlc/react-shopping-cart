@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import Cart from './Cart';
@@ -26,17 +26,14 @@ function App() {
 
 
   const addToCart = (id) => {
-    // console.log(`clicked ${id}`);
-    // console.log((products.jackets[id]));
     const itemToAdd = products.jackets.find((product) => product.id === id);
     setCartItems([...cartItems, itemToAdd]);
-    console.log(cartItems);
   };
 
   const deleteFromCart = (id) => {
-    const updatedCart = cartItems.filter((item) => item.id !==id);
-    setCartItems(updatedCart);
-    console.log(cartItems);
+    // const updatedCart = cartItems.filter((product) => product.id !==id);
+    // setCartItems(updatedCart);
+    console.log(`Product with ID ${id} deleted from cart`);
   };
 
   return (
@@ -46,7 +43,7 @@ function App() {
       {/* Cover Page */}
       <Hero />
       {/* Cart */}
-      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} delete={deleteFromCart}/>
+      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} deleteFromCart={deleteFromCart}/>
       {/* Product Grid */}
       <section className='products'>
         <h2>Products</h2>

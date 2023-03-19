@@ -2,8 +2,8 @@ import './App.css';
 import React, { useState } from 'react';
 // import products from './Products.json';
 
-const CartProduct = ({product, delete}) => {
-    const { id, name, description, price, image } = product.data;
+const CartProduct = ({data, deleteFromCart}) => {
+    const { id, name, description, price, image } = data;
     
     return (
         <div className='cart-content' key={id}>

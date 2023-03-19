@@ -10,7 +10,7 @@ const Shop = ({data, addToCart}) => {
             {
                 data.jackets.map((product) => {
                     return (
-                        <Product data={product} addToCart={addToCart}/>
+                        <Product data={product} addToCart={addToCart} />
                     )
                 })
 

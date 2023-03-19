@@ -22,28 +22,16 @@ function App() {
 
   // Add and Delete from Cart
 
-  const [cartItems, setCartItems] = useState({
-    "jackets": [
-        {
-            "id": 1,
-            "name": " Mens Frosty Flair",
-            "description": "Red Puffer Jacket",
-            "price": 350,
-            "image": "./assets/red-jacket-boy.jpg"
-        }]});
+  const [cartItems, setCartItems] = useState([]);
 
 
   const addToCart = (id) => {
-      console.log(`clicked ${id}`);
-      console.log((products.jackets[id]));
-      // setCartItems((prev) => ({ ...prev, [id]: prev[id] + 1 }));
+    // console.log(`clicked ${id}`);
+    // console.log((products.jackets[id]));
+    const itemToAdd = products.jackets.find((product) => product.id === id);
+    setCartItems([...cartItems, itemToAdd]);
+    console.log(cartItems);
   };
-
-  const removeFromCart = (id) => {
-      // setCartItems((prev) => ({ ...prev, [id]: prev[id] - 1 }));
-  };
-
-  console.log(cartItems);
 
   return (
     <>
@@ -56,7 +44,7 @@ function App() {
       {/* Product Grid */}
       <section className='products'>
         <h2>Products</h2>
-        <Shop data={products} addToCart={addToCart}/>
+        <Shop data={products} addToCart={addToCart} />
       </section>
       {/* Footer */}
       <Footer />

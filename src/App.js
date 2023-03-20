@@ -37,11 +37,13 @@ function App() {
   };
 
 
+
   // Thank you alert
 
   const handlePurchase = () => {
     if (cartItems.length > 0) {
       alert('Thank you for your purchase!');
+      setCartItems([]);
     } else {
       alert('Please add an item to your cart.');
     }

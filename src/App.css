@@ -193,6 +193,38 @@ div.hero div.cta {
 
 .cart-remove {
   cursor: pointer;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.plus-minus {
+  display: flex;
+  height: 30px;
+  width: 100%;
+  align-items: center;
+}
+
+.plus-minus button{
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--main-color);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  width: 20px;
+  height: 100%;
+}
+
+.total-product {
+  border: 1px solid black;
+  padding: 0 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
 }
 
 .btn-buy,

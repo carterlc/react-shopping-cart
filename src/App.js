@@ -24,20 +24,30 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
 
-
   const addToCart = (id) => {
     const itemToAdd = products.jackets.find((product) => product.id === id);
-    setCartItems([...cartItems, itemToAdd]);
+
+    const itemFromCart = cartItems.find((product) => product.id === id);
+
+    if (itemFromCart?.quantity) {
+      itemToAdd.quantity = itemFromCart.quantity + 1;
+    }
+    else {
+      itemToAdd.quantity = 1;
+    }
+
+    const updatedCart = cartItems.filter((product) => product.id !== id);
+    console.log(itemToAdd);
+    setCartItems([...updatedCart, itemToAdd]);
   };
 
   const deleteFromCart = (id) => {
-    const updatedCart = cartItems.filter((product) => product.id !==id);
+    const updatedCart = cartItems.filter((product) => product.id !== id);
     setCartItems(updatedCart);
-    console.log(`Product with ID ${id} deleted from cart`);
   };
 
 
-
+  
   // Thank you alert
 
   const handlePurchase = () => {
@@ -56,7 +66,7 @@ function App() {
       {/* Cover Page */}
       <Hero />
       {/* Cart */}
-      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} deleteFromCart={deleteFromCart} handlePurchase={handlePurchase}/>
+      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} deleteFromCart={deleteFromCart} handlePurchase={handlePurchase} addToCart={addToCart} />
       {/* Product Grid */}
       <section className='products'>
         <h2>Products</h2>

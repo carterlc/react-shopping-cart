@@ -7,21 +7,21 @@ export default function Footer() {
             <div>
                 <h4>Follow us</h4>
                 <ul>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://twitter.com/?lang=en">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Help</h4>
                 <ul>
-                    <li><a href="#">Help Center</a></li>
+                    <li>Help Center</li>
                 </ul>
             </div>
             <div>
                 <h4>About</h4>
                 <ul>
-                    <li><a href="#">Mission Statement</a></li>
+                    <li>Mission Statement</li>
                 </ul>
             </div>
             <div>

@@ -1,9 +1,9 @@
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 // import products from './Products.json';
 
 const CartProduct = ({ data, deleteFromCart, addToCart }) => {
-    const { id, name, description, price, image, quantity } = data;
+    const { id, name, price, image, quantity } = data;
 
     const updateCart = () => {
 
@@ -12,7 +12,7 @@ const CartProduct = ({ data, deleteFromCart, addToCart }) => {
     return (
         <div className='cart-content' key={id}>
             <div className='cart-box'>
-                <img src={image} />
+                <img src={image} alt=""/>
                 <div className='cart-details'>
                     <div className='cart-product-title'>{name}</div>
                     <div className='cart-product-price'>C${price}</div>

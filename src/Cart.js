@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React  from 'react';
 import CartProduct from './CartProduct';
 
 export default function Cart({ closeCart, showCart, data, deleteFromCart, handlePurchase, addToCart }) {

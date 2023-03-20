@@ -14,7 +14,7 @@ const CartProduct = ({data, deleteFromCart}) => {
                     <div className='cart-product-price'>C${price}</div>
                     <div className='input-and-icon'>
                         <input type="number" value="1" className="cart-quantity"></input>
-                        <i className='bx bx-trash cart-remove' onClick={deleteFromCart}></i>
+                        <i className='bx bx-trash cart-remove' onClick={() => deleteFromCart(id)}></i>
                     </div>
                 </div>
             </div>

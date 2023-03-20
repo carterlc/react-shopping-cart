@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       {/* Header */}
-      <Header cartClick={openCart} />
+      <Header openCart={openCart} />
       {/* Cover Page */}
       <Hero />
       {/* Cart */}
@@ -47,7 +47,7 @@ function App() {
       {/* Product Grid */}
       <section className='products'>
         <h2>Products</h2>
-        <Shop data={products} addToCart={addToCart} />
+        <Shop data={products} addToCart={addToCart} openCart={openCart} />
       </section>
       {/* Footer */}
       <Footer />

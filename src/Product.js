@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 // import products from './Products.json';
 
-const Product = ({data, addToCart}) => {
+const Product = ({data, addToCart, openCart}) => {
     const { id, name, description, price, image } = data;
 
     return (
@@ -12,7 +12,7 @@ const Product = ({data, addToCart}) => {
             <p>{description}</p>
             <div className='price-wrapper'>
                 <span className='price'>C${price}</span>
-                <button className='product-button' onClick={() => addToCart(id)} >Add to Cart</button>
+                <button className='product-button' onClick={() => {addToCart(id); openCart()}} >Add to Cart</button>
             </div>
         </div>
     )

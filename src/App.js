@@ -36,6 +36,17 @@ function App() {
     console.log(`Product with ID ${id} deleted from cart`);
   };
 
+
+  // Thank you alert
+
+  const handlePurchase = () => {
+    if (cartItems.length > 0) {
+      alert('Thank you for your purchase!');
+    } else {
+      alert('Please add an item to your cart.');
+    }
+  };
+
   return (
     <>
       {/* Header */}
@@ -43,7 +54,7 @@ function App() {
       {/* Cover Page */}
       <Hero />
       {/* Cart */}
-      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} deleteFromCart={deleteFromCart}/>
+      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} deleteFromCart={deleteFromCart} handlePurchase={handlePurchase}/>
       {/* Product Grid */}
       <section className='products'>
         <h2>Products</h2>

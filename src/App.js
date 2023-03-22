@@ -1,11 +1,14 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import Cart from './Cart';
 import Footer from './Footer';
 import Shop from './Shop';
 import products from './Products.json';
+
+//show total items in the cart
+let cartCount = 0;
 
 // Open and Close Cart
 
@@ -23,6 +26,14 @@ function App() {
   // Add and Delete from Cart
 
   const [cartItems, setCartItems] = useState([]);
+
+ 
+
+  useEffect(() => {
+    cartCount = cartItems.length;
+    console.log('hello');
+    console.log(cartCount);
+  }, [cartItems]);
 
   const addToCart = (id) => {
     const itemToAdd = products.jackets.find((product) => product.id === id);
@@ -62,7 +73,7 @@ function App() {
   return (
     <>
       {/* Header */}
-      <Header openCart={openCart} />
+      <Header openCart={openCart} cartCount={cartCount} />
       {/* Cover Page */}
       <Hero />
       {/* Cart */}

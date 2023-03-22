@@ -1,8 +1,9 @@
 import './App.css';
 import React from 'react';
 
-export default function Header({openCart}) {
-
+export default function Header({openCart, cartCount}) {
+    console.log('--------- here------');
+    console.log(cartCount);
     return (
         <header>
             <nav>
@@ -15,7 +16,7 @@ export default function Header({openCart}) {
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Location</a></li>
                         <li><a href="#">Search</a></li>
-                        <i onClick={openCart} className='bx bx-shopping-bag' id='cart-icon'></i>
+                        <i onClick={openCart} className='bx bx-shopping-bag' id='cart-icon'><span className='cart-count'>({cartCount})</span></i>
                     </ul>
                 </div>
             </nav>

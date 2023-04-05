@@ -2,7 +2,7 @@ import './App.css';
 import React  from 'react';
 import CartProduct from './CartProduct';
 
-export default function Cart({ closeCart, showCart, data, deleteFromCart, handlePurchase, addToCart }) {
+export default function Cart({ closeCart, showCart, data, deleteFromCart, handlePurchase, addToCart, minusOneItem }) {
 
   const total = data.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
@@ -14,7 +14,7 @@ export default function Cart({ closeCart, showCart, data, deleteFromCart, handle
         {
           data.map((product => {
             return (
-              <CartProduct key={product.id} data={product} deleteFromCart={deleteFromCart} addToCart={addToCart}/>
+              <CartProduct key={product.id} data={product} deleteFromCart={deleteFromCart} addToCart={addToCart} minusOneItem={minusOneItem}/>
             )
           }))
         }

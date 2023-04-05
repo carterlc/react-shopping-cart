@@ -27,7 +27,7 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
 
- 
+
 
   useEffect(() => {
     cartCount = cartItems.length;
@@ -46,18 +46,36 @@ function App() {
     else {
       itemToAdd.quantity = 1;
     }
-
     const updatedCart = cartItems.filter((product) => product.id !== id);
     console.log(itemToAdd);
     setCartItems([...updatedCart, itemToAdd]);
   };
+
+  //Remove item(s) from cart entirely
 
   const deleteFromCart = (id) => {
     const updatedCart = cartItems.filter((product) => product.id !== id);
     setCartItems(updatedCart);
   };
 
+  //Minus one item from the shopping cart
 
+  const minusOneItem = (id) => {
+    const itemToAdd = products.jackets.find((product) => product.id === id);
+
+    const itemFromCart = cartItems.find((product) => product.id === id);
+
+    if (itemFromCart?.quantity) {
+      itemToAdd.quantity = itemFromCart.quantity - 1;
+    }
+    else {
+      itemToAdd.quantity = 0;
+    }
+
+    const updatedCart = cartItems.filter((product) => product.id !== id);
+    console.log(itemToAdd);
+    setCartItems([...updatedCart, itemToAdd]);
+  };
 
   // Thank you alert
 
@@ -77,7 +95,7 @@ function App() {
       {/* Cover Page */}
       <Hero />
       {/* Cart */}
-      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} deleteFromCart={deleteFromCart} handlePurchase={handlePurchase} addToCart={addToCart} />
+      <Cart closeCart={closeCart} showCart={showCart} data={cartItems} deleteFromCart={deleteFromCart} handlePurchase={handlePurchase} addToCart={addToCart} minusOneItem={minusOneItem} />
       {/* Product Grid */}
       <section className='products'>
         <h2>Products</h2>

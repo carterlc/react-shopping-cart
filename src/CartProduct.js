@@ -2,12 +2,8 @@ import './App.css';
 import React from 'react';
 // import products from './Products.json';
 
-const CartProduct = ({ data, deleteFromCart, addToCart }) => {
+const CartProduct = ({ data, deleteFromCart, addToCart, minusOneItem }) => {
     const { id, name, price, image, quantity } = data;
-
-    const updateCart = () => {
-
-    }    
 
     return (
         <div className='cart-content' key={id}>
@@ -19,7 +15,7 @@ const CartProduct = ({ data, deleteFromCart, addToCart }) => {
                     <div className='plus-minus'>
                         <button className='plus' onClick={() => addToCart(id)}>+</button>
                         <div className='total-product'>{quantity}</div>
-                        <button className='minus' onClick={() => deleteFromCart(id)}>-</button>
+                        <button className='minus' onClick={() => minusOneItem(id)}>-</button>
                         <i className='bx bx-trash cart-remove' onClick={() => deleteFromCart(id)}></i>
                     </div>
                 </div>

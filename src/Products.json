@@ -62,6 +62,27 @@
             "description": "Grey Puffer Jacket",
             "price": 410,
             "image": "./assets/grey-jacket-girl.jpg"
+        },
+        {
+            "id": 9,
+            "name": "North Pole Pro",
+            "description": "Black Insulated Jacket",
+            "price": 220,
+            "image": "./assets/black-jacket-boy-with-toque.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Frosty Fluff Jacket",
+            "description": "Brown Insulated Jacket",
+            "price": 190,
+            "image": "./assets/brown-jacket-white-inside-girl.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Glacier Gaurdian",
+            "description": "Grey Insulated Jacket",
+            "price": 360,
+            "image": "./assets/grey-jacket-boy.jpg"
         }
     ]
 }

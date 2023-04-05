@@ -122,13 +122,13 @@ nav a:hover::after {
   line-height: 20px;
   outline: none;
   padding: 13px 53px;
-  position: relative;
   text-align: center;
   text-decoration: none;
   touch-action: manipulation;
   user-select: none;
   -webkit-user-select: none;
   width: auto;
+  transition: background-color 300ms ease;
 }
 
 .hero-btn:hover {
